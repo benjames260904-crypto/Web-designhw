@@ -1,0 +1,329 @@
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #e65100;
+    --primary-light: #ff8a3d;
+    --danger: #d32f2f;
+    --danger-hover: #b71c1c;
+    --bg: #f5f5f5;
+    --card-bg: #ffffff;
+    --text: #212121;
+    --text-secondary: #757575;
+    --border: #e0e0e0;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.form-container {
+    background: var(--card-bg);
+    border: 2px solid #1a237e;
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    box-shadow: var(--shadow);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.form-header h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--danger), var(--primary));
+    margin: 16px 0 24px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-display {
+    background: var(--danger);
+    color: #fff;
+    border: 2px solid var(--danger);
+}
+
+.btn-add {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-image {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== FORM FIELDS ===== */
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.field-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.field-group input[type="text"],
+.field-group input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: #fafafa;
+}
+
+.field-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+}
+
+.field-group input::placeholder {
+    color: #bdbdbd;
+}
+
+.field-image {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.image-name {
+    font-size: 12px;
+    color: var(--primary);
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== DISPLAY SECTION ===== */
+.display-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.display-container {
+    background: var(--card-bg);
+    border: 2px solid #1a237e;
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+}
+
+.display-header {
+    margin-bottom: 28px;
+}
+
+.display-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.display-header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* ===== ROOMS GRID ===== */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* ===== ROOM CARD ===== */
+.room-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== HEART ICON ===== */
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.heart-icon svg {
+    fill: #e65100;
+    stroke: #e65100;
+}
+
+/* ===== CARD BODY ===== */
+.card-body {
+    padding: 14px 16px 18px;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 1px;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.review-count {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.card-price-label {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.card-availability {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.card-availability span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ===== BOOK BUTTON ===== */
+.btn-book {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
